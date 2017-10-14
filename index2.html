@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul{
+            list-style:none;
+        }
+        .box{
+            width:500px;
+            margin:100px auto;
+        }
+        li:nth-child(2){
+            width:250px;
+            height:365px;
+            background:url(img/phone.jpg) no-repeat;
+            background-size:contain;
+            cursor:pointer;
+            float:left;
+        }
+        .mask{
+            width:250px;
+            height:365px;
+            position:relative;
+        }
+        .bg{
+            width:250px;
+            height:365px;
+            background-color: #000;
+            opacity:.62;
+        }
+        .content{
+            width:250px;
+            /*这里不需要设高*/
+            /*height:365px;*/
+            position:absolute;
+            top:80px;
+            left:0;
+            z-index:8;
+            text-align:center;
+        }
+        .imge{
+            width:25%;
+            display:inline-block;
+            position:relative;
+        }
+        .item-img{
+            width:67px;
+            height:67px;
+            opacity:1;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        .item-img-hover{
+           width:67px;
+            height:67px;
+            opacity:0;
+            transition:all .4s;
+        }
+        .content>p>i{
+           width:20px;
+            height:2px;
+            display:inline-block;
+            background-color: #fff;
+            margin-top:20px;
+            opacity:1;
+            transition:all .4s;
+        }
+        h3{
+            color:#fff;
+            font-size: 22px;
+            margin-top:30px;
+            transition:all .4s;
+        }
+        .content>.desc{
+            color:#fff;
+            font-size: 15px;
+            margin-top:20px;
+            opacity:0;
+            transition:all .4s;
+        }
+        .item-link{
+            width:120px;
+            height:30px;
+            display:inline-block;
+            color:#fff;
+            font-size:14px;
+            line-height:30px;
+            border:1px solid #fff;
+            margin-top:20px;
+            opacity:0;
+            transition:all .4s;
+        }
+        li:nth-child(2):hover>.mask>.content>.imge>.item-img{
+            transform:translateY(-20px);
+            opacity:0;
+        }
+        li:nth-child(2):hover>.mask>.content>.imge>.item-img-hover{
+            transform:translateY(-20px);
+            opacity:1;
+        }
+        li:nth-child(2):hover>.mask>.bg{
+            background-color: #00c1de;
+            opacity:.8;
+        }
+        li:nth-child(2):hover>.mask>.content>p>i{
+            opacity:0;
+        }
+        li:nth-child(2):hover>.mask>.content>h3{
+            transform:translateY(-20px);
+        }
+        li:nth-child(2):hover>.mask>.content>.desc{
+            transform:translateY(-20px);
+            opacity:1;
+        }
+        li:nth-child(2):hover>.mask>.content>.item-link{
+            transform:translateY(-20px);
+            opacity:1;
+        }
+        .content>.item-link:hover{
+            background-color: #fff;
+            color:#00c1de;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li></li>
+        <li>
+            <div class="mask">
+                <div class="bg"></div>
+                <div class="content">
+                    <div class="imge">
+                        <img src="img/1.png" alt="" class="item-img"/>
+                        <img src="img/2.png" alt="" class="item-img-hover"/>
+                    </div>
+                    <p><i></i></p>
+                    <h3>APP解决方案</h3>
+                    <p class="desc">助力移动开发者实现基于大数据技术的精细化运营、提升产品质量和体验、增强用户黏性。</p>
+                    <span class="item-link">查看详情</span>
+                </div>
+            </div>
+        </li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+</html>
